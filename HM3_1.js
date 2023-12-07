@@ -4,21 +4,17 @@
 let input = prompt("Введіть число: ");
 let number = Number(input);
 
-if (number === 1) {
-    console.log("1 не є простим або складеним числом");
-} else {
-    console.log(`Число ${number} ${isPrimeNumber(number) ? 'є простим' : 'не є простим'} числом`);
-}
+GetPrimeNumberLog(number);
 
-function isPrimeNumber(number) {
+function GetPrimeNumberLog(number) {
     if (number > 1) {
         for (let i = 2; i < number; i++) {
             if (number % i === 0) {
-                return false;
+                return console.log(`Число ${number} не є простим числом`);
             }
         }
-        return true;
+        return console.log(`Число ${number} є простим числом`);
     } else {
-        return false;
+        return console.log(`Число ${number} не є простим числом`);
     }
 }

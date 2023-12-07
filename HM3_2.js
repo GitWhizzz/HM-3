@@ -3,8 +3,8 @@
 let input = prompt("Введіть число: ");
 let number = Number(input);
 
-for (let i = 0; i < number; i++) {
-    if (isPerfectNumber(i)) console.log(i); // невпевненна чи потрібно виводити у консоль?
+for (let i = 1; i < number; i++) {
+    if (isPerfectNumber(i)) console.log(i);
 }
 
 function isPerfectNumber(number) {
